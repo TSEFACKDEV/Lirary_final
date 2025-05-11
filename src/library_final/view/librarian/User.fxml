@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="758.0" prefWidth="957.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../../../LibraryManagement1/src/librarymanagement1/View/Authentification/connection.css" />
+   </stylesheets>
+   <top>
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="13.0" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="150.0" style="-fx-padding: 10; -fx-alignment: CENTER; -fx-border-color: #635bff; -fx-border-radius: 5;" text="LIBRARY" textAlignment="CENTER" textFill="#635bff" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/open-book.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" prefHeight="55.0" prefWidth="86.0" style="-fx-padding: 15;" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/material-symbols--menu-rounded.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="15.0" />
+               </opaqueInsets>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../LibraryManagement1/src/image/heroicons--moon.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="17.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../LibraryManagement1/src/image/ion--notifications-outline.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="5.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../LibraryManagement1/src/image/tabler--message.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="17.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../LibraryManagement1/src/image/solar--settings-linear.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="5.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../LibraryManagement1/src/image/utilisateur.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="5.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../LibraryManagement1/src/image/quill--off.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="5.0" prefWidth="25.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="571.0" prefWidth="194.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Dashboard" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/ph--squares-four-light.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label prefHeight="37.0" prefWidth="139.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Ressources">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/solar--bill-list-linear.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="39.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Manage Books">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/ri--book-shelf-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="45.0" prefWidth="145.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Reports">
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/flat-color-icons--ok.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="44.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Lended Books">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/system-uicons--book-text.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10; -fx-background-color: #635BFF;" text="Members" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/pepicons-pencil--persons.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Settings" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/solar--settings-linear.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Notifications" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/ion--notifications-outline.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
+                     <image>
+                        <Image url="@../../../LibraryManagement1/src/image/quill--off.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="271.0" style="-fx-font-weight: bold;" text="ENSPD 2025">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="478.0" prefWidth="710.0" style="-fx-border-radius: 10;" BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox prefHeight="20.0" prefWidth="668.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="757.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="28.0" prefHeight="19.0" prefWidth="116.0" text="Manage Librarian" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="531.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox prefHeight="531.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #e3e7ea; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+               <bottom>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="721.0" style="-fx-background-color: #F4F7FC;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="19.0" />
+                        <Label alignment="CENTER" prefHeight="24.0" prefWidth="142.0" text="Total Librarian : 1000">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </bottom>
+               <top>
+                  <BorderPane prefHeight="56.0" prefWidth="721.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="682.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField prefHeight="34.0" prefWidth="190.0" promptText="Search Librarian" style="-fx-border-color: #e3e7ea; -fx-border-radius: 5;" HBox.hgrow="SOMETIMES" />
+                              <Label prefHeight="17.0" prefWidth="181.0" HBox.hgrow="ALWAYS" />
+                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: GREEN; -fx-border-radius: 5; -fx-border-radius: 5;" text="Edit Librarian" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="13.0" HBox.hgrow="ALWAYS" />
+                              <Label alignment="CENTER" layoutX="494.0" layoutY="12.0" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: RED; -fx-border-radius: 5;" text="Delete Librarian" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="508.0" layoutY="12.0" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #635bff; -fx-border-radius: 5;" text="Add Librarian" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </center>
+                     <bottom>
+                        <HBox prefHeight="10.0" prefWidth="721.0" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <left>
+                        <VBox prefHeight="31.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <top>
+                        <HBox prefHeight="10.0" prefWidth="721.0" BorderPane.alignment="CENTER" />
+                     </top>
+                  </BorderPane>
+               </top>
+               <center>
+                  <TableView style="-fx-background-color: white;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn prefWidth="137.60003930330276" text="NIC" />
+                      <TableColumn prefWidth="119.19996643066406" text="Name" />
+                        <TableColumn prefWidth="144.0" text="Phone" />
+                        <TableColumn maxWidth="1.7976931348623157E308" prefWidth="111.19998168945312" text="email" />
+                        <TableColumn prefWidth="128.0" text="Password" />
+                        <TableColumn prefWidth="72.0" text="Status" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
