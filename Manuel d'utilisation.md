@@ -12,7 +12,7 @@
   - Jakarta BCrypt (ex: `jakarta.bcrypt-x.x.x.jar`) pour hasher le mot de passe
 
 **Où trouver ces JAR ?**
-- Télécharge-les depuis les sites officiels ou via Maven Central.
+- Dans le dossier ziper `fichier jar.zip` à la racine du projet .
 - Place-les dans un dossier `lib/` à la racine du projet.
 
 ---
@@ -62,21 +62,8 @@ mail.smtp.starttls.enable=true
 
 ## 3. Compilation et exécution
 
-### a. Compilation
-
-- **Avec NetBeans** : clic droit > Clean and Build.
-- **En ligne de commande** :
-  ```sh
-  javac -cp "lib/*" -d build/classes src/library_final/**/*.java
-  ```
-
-### b. Exécution
-
-- **Avec NetBeans** : clic droit > Run.
-- **En ligne de commande** :
-  ```sh
-  java -cp "build/classes;lib/*" library_final.Library_final
-  ```
+- **en interface graphique** : clic droit sur le fichier Library_final.java > Run.
+- **En console** : dans le dossier `test` faite un clique droit sur `GeneralTest.java`
 
 ---
 
@@ -87,7 +74,6 @@ mail.smtp.starttls.enable=true
 - **Gestion des exemplaires** : ajouter, modifier, suppression logique.
 - **Gestion des emprunts** : ajouter un prêt, enregistrer un retour, statistiques.
 - **Réinitialisation du mot de passe** : envoi d’un code par email.
-- **Statistiques** : top 5 des livres empruntés, taux de retour, etc.
 
 ---
 
