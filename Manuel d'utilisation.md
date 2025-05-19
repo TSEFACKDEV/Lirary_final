@@ -42,7 +42,7 @@ C:\Users\TSEFACK\Documents\NetBeansProjects
    - Exemple :
      ```
      db.url=jdbc:mysql://localhost:3306/library
-     db.user=VOTRE_UTILISATEUR
+     db.user=VOTRE_UTILISATEUR 
      db.password=VOTRE_MOT_DE_PASSE
      ```
 

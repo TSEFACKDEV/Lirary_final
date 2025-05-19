@@ -75,6 +75,31 @@ CREATE TABLE IF NOT EXISTS Loan (
     FOREIGN KEY (librarian_id) REFERENCES `User`(id)
 ) ENGINE=InnoDB;
 
+-- Insertion de personnes
+INSERT INTO Person (name, nic, phone, email) VALUES
+('Tsefack klein', 'NIC12345', '0600000001', 'klein@example.com'),
+('ngansop fredi', 'NIC12346', '0600000002', 'fredi@example.com');
+
+-- Insertion d’un utilisateur (librarian/admin)
+INSERT INTO `User` (id, password, role, status) VALUES
+(1, '23721', 'Librarian', 'Active');
+
+-- Insertion d’un emprunteur
+INSERT INTO Borrower (id, max_loan) VALUES
+(2, 3);
+
+-- Insertion d’un livre
+INSERT INTO Book (title, author, isbn, year_publication, image, description, position, status) VALUES
+(' Petit Joe enfant des rues ', 'eveline poundi', '9782070612758', 1943, NULL, 'histoire de vie', 'A1', 'Active');
+
+-- Insertion d’un exemplaire du livre
+INSERT INTO Copy (book_id, code, status) VALUES
+(1, 'EX001', 'Available');
+
+-- Insertion d’un emprunt
+INSERT INTO Loan (borrower_id, copy_id, librarian_id, date_loan, exp_return_date, act_return_date) VALUES
+(2, 1, 1, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 14 DAY), NULL);
+
 
 
 

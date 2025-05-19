@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="762.0" prefWidth="1417.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="762.0" prefWidth="1417.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library_final.controller.BorrowController" >
    <stylesheets>
       <URL value="@../../../LibraryManagement1/src/librarymanagement1/View/Authentification/connection.css" />
    </stylesheets>
@@ -26,7 +26,7 @@
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../image/open-book.png" />
+                        <Image url="@../../../image/open-book.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -102,7 +102,7 @@
                   </ImageView>
                </graphic>
             </Label>
-            <Label prefHeight="37.0" prefWidth="139.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Ressources">
+            <Label prefHeight="37.0" prefWidth="139.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Manage Loan">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
                      <image>
@@ -111,7 +111,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="14.0" />
+                  <Font size="13.0" />
                </font>
             </Label>
             <Label prefHeight="39.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Manage Books">
@@ -126,7 +126,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label prefHeight="45.0" prefWidth="145.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Reports">
+            <Label prefHeight="45.0" prefWidth="145.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Manage Copies">
                <graphic>
                   <ImageView fitHeight="76.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
                      <image>
@@ -135,56 +135,8 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="14.0" />
+                  <Font size="13.0" />
                </font>
-            </Label>
-            <Label prefHeight="44.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Lended Books">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/system-uicons--book-text.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Members" textAlignment="CENTER" textFill="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/pepicons-pencil--persons.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Settings" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/solar--settings-linear.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10; -fx-background-color: #635BFF;" text="Loan" textAlignment="CENTER" textFill="#fffefe">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/ion--notifications-outline.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </Label>
             <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Logout" textAlignment="CENTER">
                <font>
@@ -261,7 +213,7 @@
                                  </HBox.margin>
                               </ChoiceBox>
                               <Label prefHeight="17.0" prefWidth="181.0" HBox.hgrow="ALWAYS" />
-                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: GREEN; -fx-border-radius: 5; -fx-border-radius: 5;" text="Edit Loan" textFill="WHITE" HBox.hgrow="ALWAYS">
+                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: GREEN; -fx-border-radius: 5; -fx-border-radius: 5;" onAction="#handleEditLoan" text="Edit Loan" textFill="WHITE" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -270,7 +222,7 @@
                                  </HBox.margin>
                               </Label>
                               <Label prefHeight="17.0" prefWidth="13.0" HBox.hgrow="ALWAYS" />
-                              <Label alignment="CENTER" layoutX="494.0" layoutY="12.0" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: RED; -fx-border-radius: 5;" text="Delete Loan" textFill="WHITE">
+                              <Label alignment="CENTER" layoutX="494.0" layoutY="12.0" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: RED; -fx-border-radius: 5;" onAction="#handleDeleteLoan" text="Delete Loan" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -278,7 +230,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label alignment="CENTER" layoutX="508.0" layoutY="12.0" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #635bff; -fx-border-radius: 5;" text="Add Loan" textFill="WHITE">
+                              <Label alignment="CENTER" layoutX="508.0" layoutY="12.0" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #635bff; -fx-border-radius: 5;" onAction="#handleAddLoan" text="Add Loan" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -301,14 +253,14 @@
                   </BorderPane>
                </top>
                <center>
-                  <TableView style="-fx-background-color: white;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                  <TableView fx:id="loanTable" style="-fx-background-color: white;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
                     <columns>
-                      <TableColumn prefWidth="148.7999752163887" text="NIC Borrower" />
-                      <TableColumn prefWidth="148.8000030517578" text="Name Borrower" />
+                      <TableColumn  prefWidth="148.8000030517578" fx:id="idColumn" text="ID"/>
+                      <TableColumn prefWidth="148.8000030517578"  fx:id="borrowerColumn" text="Name Borrower" />
                         <TableColumn prefWidth="149.60003662109375" text="Phone Borrower" />
                         <TableColumn prefWidth="134.39993286132812" text="Copy Code" />
-                        <TableColumn prefWidth="141.60003662109375" text="Book Title" />
-                        <TableColumn prefWidth="148.7999267578125" text="Loan Date" />
+                        <TableColumn prefWidth="141.60003662109375"  fx:id="bookColumn" text="Book Title" />
+                        <TableColumn prefWidth="148.7999267578125" fx:id="dateColumn"  text="Loan Date" />
                         <TableColumn prefWidth="167.199951171875" text="Return Date" />
                         <TableColumn prefWidth="143.199951171875" text="Status" />
                     </columns>
