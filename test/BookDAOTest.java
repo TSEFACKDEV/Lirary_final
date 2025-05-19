@@ -22,7 +22,7 @@ public class BookDAOTest {
         BookDAO bookDAO = new BookDAO();
 
         System.out.println("===== TEST : AJOUT D'UN LIVRE =====");
-        Book newBook = new Book(0, "JavaFX for Beginners", "John Doe", "978-1234567890", 2024, null, "A complete guide to JavaFX", "A1");
+        Book newBook = new Book(0, "JavaFX for Beginners", "John Doe", "978-1234567890", 2024, null, "A complete guide to JavaFX");
         boolean isAdded = bookDAO.create(newBook);
         if (isAdded) {
             System.out.println("Livre ajouté avec succès ! ID : " + newBook.getIdBook());

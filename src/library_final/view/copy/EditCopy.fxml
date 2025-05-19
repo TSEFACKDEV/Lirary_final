@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="758.0" prefWidth="957.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library_final.controller.BookController">
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="758.0" prefWidth="957.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library_final.controller.CopyController">
    <stylesheets>
       <URL value="@../../../LibraryManagement1/src/librarymanagement1/View/Authentification/connection.css" />
    </stylesheets>
@@ -115,7 +116,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label prefHeight="39.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold; -fx-background-color: #635bff; -fx-border-radius: 5;" text="Manage Books" textFill="WHITE">
+            <Label prefHeight="39.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold; -fx-border-radius: 5;" text="Manage Books" textFill="#080808">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
                      <image>
@@ -127,7 +128,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label prefHeight="45.0" prefWidth="145.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Manage Copies">
+            <Label prefHeight="46.0" prefWidth="164.0" style="-fx-padding: 10; -fx-font-weight: Bold; -fx-background-color: #635BFF;" text="Manage Copies" textFill="#fafafa">
                <graphic>
                   <ImageView fitHeight="76.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
                      <image>
@@ -136,7 +137,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="13.0" />
+                  <Font size="14.0" />
                </font>
             </Label>
             <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Logout" textAlignment="CENTER">
@@ -179,11 +180,11 @@
                            </font>
                         </Label>
                         <Label prefHeight="17.0" prefWidth="13.0" />
-                        <Button alignment="CENTER" layoutX="328.0" layoutY="14.0" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #635bff; -fx-border-color: white; -fx-border-radius: 5;" text="Add Book" textFill="WHITE"  onAction="#handleSaveBook">
+                        <Label alignment="CENTER" layoutX="328.0" layoutY="14.0" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #635bff; -fx-border-color: white; -fx-border-radius: 5;" text="Edit Copy" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
-                        </Button>
+                        </Label>
                      </children>
                   </HBox>
                </children></HBox>
@@ -191,7 +192,7 @@
          <top>
             <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="763.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="28.0" prefHeight="19.0" prefWidth="103.0" text="Manage Books" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                  <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="28.0" prefHeight="19.0" prefWidth="103.0" text="Manage Copies" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -201,7 +202,7 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="73.0" style="-fx-font-weight: Bold;" text="Add  Book" textFill="#635bff">
+                  <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="73.0" style="-fx-font-weight: Bold;" text="Edit  Copies" textFill="#635bff">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -239,110 +240,22 @@
                      <children>
                         <Pane prefHeight="122.0" prefWidth="342.0">
                            <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Title">
+                              <Label layoutX="22.0" layoutY="30.0" text="Book">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtTitle"  layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Title" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="122.0" prefWidth="342.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Description">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtDescription"  layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Description" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="122.0" prefWidth="342.0" GridPane.rowIndex="3">
-                           <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Position">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtPosition" layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Position" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="122.0" prefWidth="342.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Image">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtImage" layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the image" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="122.0" prefWidth="342.0" GridPane.rowIndex="2">
-                           <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Year Of Publication">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtYear" layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Date of  Publication" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="122.0" prefWidth="342.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Number of Copies">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField  layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Number of copies" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="122.0" prefWidth="342.0" GridPane.rowIndex="1">
-                           <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="ISBN">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtIsbn" layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the ISBN" style="-fx-border-color: #635BFF;">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </TextField>
+                              <ChoiceBox layoutX="22.0" layoutY="61.0" prefHeight="39.0" prefWidth="281.0" />
                            </children>
                         </Pane>
                         <Pane prefHeight="122.0" prefWidth="342.0" GridPane.columnIndex="1">
                            <children>
-                              <Label layoutX="22.0" layoutY="30.0" text="Author">
+                              <Label layoutX="22.0" layoutY="30.0" text="Copy Code">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtAuthor" layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Author" style="-fx-border-color: #635BFF;">
+                              <TextField layoutX="22.0" layoutY="60.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>

@@ -10,10 +10,14 @@ import javafx.scene.Node;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+import library_final.model.DAO.UserDAO;
+import library_final.model.entity.User;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
     @FXML
     private TextField emailField;
@@ -21,41 +25,53 @@ public class LoginController {
     @FXML
     private PasswordField passwordField;
 
+    private UserDAO userDAO;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Initialisation du DAO (ajustez selon votre gestion de connexion)
+        userDAO = new UserDAO(library_final.config.DatabaseConnection.getConnection());
+    }
+
     @FXML
     private void handleLogin(ActionEvent event) {
-        String username = emailField.getText();
+        String email = emailField.getText();
         String password = passwordField.getText();
 
-        // Validation basique
-        if (username.isEmpty() || password.isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, "Erreur de connexion", 
-                     "Veuillez entrer un nom d'utilisateur et un mot de passe");
+        if (email.isEmpty() || password.isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Erreur de connexion",
+                    "Veuillez entrer un nom d'utilisateur et un mot de passe");
             return;
         }
 
-        // Ici vous devriez ajouter votre logique d'authentification
-        System.out.println("Tentative de connexion avec: " + username);
+        User user = userDAO.login(email, password);
+
+        if (user == null) {
+            showAlert(Alert.AlertType.ERROR, "Erreur de connexion",
+                    "Email ou mot de passe incorrect.");
+            return;
+        }
+
+        // Redirection selon le rôle (exemple)
+        String dashboardPath = "/library_final/view/librarian/Dashboard.fxml";
+        if ("Administrator".equalsIgnoreCase(user.getClass().getSimpleName())) {
+            dashboardPath = "/library_final/view/admin/Dashboard.fxml";
+        }
 
         try {
-            // Chargement de la nouvelle vue
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/library_final/view/librarian/Dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(dashboardPath));
             Parent root = loader.load();
-            
-            // Création de la nouvelle scène
+
             Scene scene = new Scene(root);
-            
-            // Récupération de la fenêtre actuelle
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            
-            // Configuration de la nouvelle scène
             stage.setScene(scene);
             stage.setTitle("Dashboard");
             stage.show();
-            
+
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert(Alert.AlertType.ERROR, "Erreur", 
-                      "Impossible de charger la page Dashboard: " + e.getMessage());
+            showAlert(Alert.AlertType.ERROR, "Erreur",
+                    "Impossible de charger la page Dashboard: " + e.getMessage());
         }
     }
 

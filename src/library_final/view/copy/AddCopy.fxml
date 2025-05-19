@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="758.0" prefWidth="957.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagement1.View.Authentification.ConnectionController">
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="758.0" prefWidth="957.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library_final.controller.CopyController">
    <stylesheets>
       <URL value="@../../../LibraryManagement1/src/librarymanagement1/View/Authentification/connection.css" />
    </stylesheets>
@@ -104,7 +104,7 @@
                   </ImageView>
                </graphic>
             </Label>
-            <Label prefHeight="37.0" prefWidth="139.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Ressources">
+            <Label prefHeight="37.0" prefWidth="139.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Manage Loan">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
                      <image>
@@ -113,7 +113,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="14.0" />
+                  <Font size="13.0" />
                </font>
             </Label>
             <Label prefHeight="39.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold; -fx-border-radius: 5;" text="Manage Books" textFill="#080808">
@@ -140,42 +140,6 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label prefHeight="44.0" prefWidth="143.0" style="-fx-padding: 10; -fx-font-weight: Bold;" text="Lended Books" textFill="#050505">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/system-uicons--book-text.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Members" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/pepicons-pencil--persons.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Notifications" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                     <image>
-                        <Image url="@../../../LibraryManagement1/src/image/ion--notifications-outline.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
             <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Logout" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -188,22 +152,7 @@
                   </ImageView>
                </graphic>
             </Label>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Settings" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                           <image>
-                              <Image url="@../../../LibraryManagement1/src/image/solar--settings-linear.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-               </children>
-            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
          </children>
       </VBox>
    </left>
@@ -231,7 +180,7 @@
                            </font>
                         </Label>
                         <Label prefHeight="17.0" prefWidth="13.0" />
-                        <Label alignment="CENTER" layoutX="328.0" layoutY="14.0" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #635bff; -fx-border-color: white; -fx-border-radius: 5;" text="Add Copy" textFill="WHITE">
+                        <Label alignment="CENTER" layoutX="328.0" layoutY="14.0" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #635bff; -fx-border-color: white; -fx-border-radius: 5;" text="Add Copy" fx:id="btnAddCopy" onAction="#handleAddCopy" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -296,7 +245,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <ChoiceBox layoutX="22.0" layoutY="61.0" prefHeight="39.0" prefWidth="281.0" />
+                              <ChoiceBox fx:id="choiceBook" layoutX="22.0" layoutY="61.0" prefHeight="39.0" prefWidth="281.0" />
                            </children>
                         </Pane>
                         <Pane prefHeight="122.0" prefWidth="342.0" GridPane.columnIndex="1">
@@ -306,7 +255,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="22.0" layoutY="60.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
+                              <TextField fx:id="txtCopyCode" layoutX="22.0" layoutY="60.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>

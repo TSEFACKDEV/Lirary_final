@@ -82,9 +82,7 @@ public class BookDAO implements DAO<Book> {
                     rs.getString("isbn"),
                     rs.getInt("year_publication"),
                     rs.getString("image"),
-                    rs.getString("description"),
-                    rs.getString("position")
-                );
+                    rs.getString("description"));
             }
         } catch (SQLException e) {
             System.err.println("Erreur lors de la récupération du livre : " + e.getMessage());
@@ -106,9 +104,7 @@ public class BookDAO implements DAO<Book> {
                     rs.getString("isbn"),
                     rs.getInt("year_publication"),
                     rs.getString("image"),
-                    rs.getString("description"),
-                    rs.getString("position")
-                );
+                    rs.getString("description"));
             }
         } catch (SQLException e) {
             System.err.println("Erreur lors de la récupération du livre : " + e.getMessage());
@@ -136,9 +132,7 @@ public class BookDAO implements DAO<Book> {
                     rs.getString("isbn"),
                     rs.getInt("year_publication"),
                     rs.getString("image"),
-                    rs.getString("description"),
-                    rs.getString("position")
-                ));
+                    rs.getString("description")));
             }
         } catch (SQLException e) {
             System.err.println("Erreur lors de la récupération des livres : " + e.getMessage());
@@ -215,5 +209,9 @@ public class BookDAO implements DAO<Book> {
             }
         }
         return false;
+    }
+
+    public void save(Book newBook) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

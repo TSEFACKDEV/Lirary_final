@@ -3,9 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/KleinDev/Documents/NetBeansProjects/Library_final/src/library_final/Library_final.java</file>
-            <file>file:/C:/Users/KleinDev/Documents/NetBeansProjects/Library_final/src/library_final/view/login/Login.fxml</file>
-            <file>file:/C:/Users/KleinDev/Documents/NetBeansProjects/Library_final/src/library_final/controller/LoginController.java</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/controller/BorrowController.java</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/controller/BookController.java</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/controller/DashboardController.java</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/librarian/Dashboard.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/loan/Loan.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/loan/AddLoan.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/librarian/User.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/copy/Copy.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/copy/EditCopy.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/copy/AddCopy.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/view/books/AddBook.fxml</file>
+            <file>file:/C:/Users/TSEFACK/Desktop/Lirary_final/src/library_final/Library_final.java</file>
         </group>
     </open-files>
 </project-private>

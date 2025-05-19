@@ -25,7 +25,7 @@ public class Book {
     private String status;
     private List<Copy> copies;
 
-    public Book(int id_book, String title, String author, String isbn, int year_publication, String image, String description, String position) {
+    public Book(int id_book, String title, String author, String isbn, int year_publication, String image, String description) {
         this.id_book = id_book;
         this.title = title;
         this.author = author;

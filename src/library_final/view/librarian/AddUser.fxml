@@ -103,7 +103,7 @@
                   </ImageView>
                </graphic>
             </Label>
-            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10; -fx-background-color: #635BFF;" text="Members" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="24.0" layoutY="11.0" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10; -fx-background-color: #635BFF;" text="Librarian" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -127,22 +127,7 @@
                   </ImageView>
                </graphic>
             </Label>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="49.0" prefWidth="148.0" style="-fx-padding: 10;" text="Settings" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-fit-height: 25; -fx-fit-width: 25;">
-                           <image>
-                              <Image url="@../../../LibraryManagement1/src/image/solar--settings-linear.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-               </children>
-            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
          </children>
       </VBox>
    </left>
@@ -182,7 +167,7 @@
          <top>
             <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="763.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="28.0" prefHeight="19.0" prefWidth="120.0" text="Manage Members" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                  <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="28.0" prefHeight="19.0" prefWidth="120.0" text="Manage Librarian" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -235,7 +220,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter Name" style="-fx-border-color: #635BFF;">
+                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -249,7 +234,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Password" style="-fx-border-color: #635BFF;">
+                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -263,7 +248,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Email Addres" style="-fx-border-color: #635BFF;">
+                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -277,7 +262,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter the Phone Number" style="-fx-border-color: #635BFF;">
+                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -291,7 +276,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" promptText="Enter NIC" style="-fx-border-color: #635BFF;">
+                              <TextField layoutX="20.0" layoutY="61.0" prefHeight="37.0" prefWidth="284.0" style="-fx-border-color: #635BFF;">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
